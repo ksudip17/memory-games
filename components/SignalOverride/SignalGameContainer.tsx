@@ -233,11 +233,11 @@ export default function SignalGameContainer() {
   }, [])
 
   return (
-    <div className="bg-white rounded-3xl shadow-xl p-8 border border-slate-200">
-      <h2 className="text-4xl font-bold text-center text-slate-800 mb-2 text-balance">
+    <div className="bg-white rounded-3xl shadow-xl p-4 sm:p-6 md:p-8 border border-slate-200">
+      <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-slate-800 mb-2 text-balance">
         Signal <span className="text-purple-600">Override</span>
       </h2>
-      <p className="text-center text-slate-600 mb-6 text-pretty">Test your reflexes and cognitive flexibility</p>
+      <p className="text-center text-slate-600 mb-4 sm:mb-6 text-sm sm:text-base text-pretty">Test your reflexes and cognitive flexibility</p>
 
       <SignalScore score={score} bestScore={bestScore} />
 
@@ -254,9 +254,9 @@ export default function SignalGameContainer() {
       <SignalControls gameStatus={gameStatus} onStart={startGame} onRestart={restartGame} />
 
       {gameStatus === "gameover" && (
-        <div className="mt-6 bg-red-50 border-2 border-red-200 rounded-xl p-4 text-center animate-shake">
-          <p className="text-2xl font-bold text-red-600 mb-2">Game Over!</p>
-          <p className="text-slate-700">Final Score: {score}</p>
+        <div className="mt-4 sm:mt-6 bg-red-50 border-2 border-red-200 rounded-xl p-3 sm:p-4 text-center animate-shake">
+          <p className="text-lg sm:text-xl md:text-2xl font-bold text-red-600 mb-2">Game Over!</p>
+          <p className="text-xs sm:text-sm md:text-base text-slate-700">Final Score: {score}</p>
         </div>
       )}
     </div>
